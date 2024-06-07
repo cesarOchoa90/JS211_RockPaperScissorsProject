@@ -14,6 +14,33 @@ const rl = readline.createInterface({
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
 
+  hand1 = hand1.toLowerCase().trim();
+  hand2 = hand2.toLowerCase().trim();
+
+  //if both hands are then same then tie
+
+  // if hand1 == hand2 then tie
+
+  if (hand1 == hand2){ 
+    return "It's a tie!"
+  } else if (hand1 == "rock" && hand2 == "paper"){
+    return "Hand two wins!"
+  } else if (hand1 == "paper" && hand2 == "rock"){
+    return "Hand one wins!"
+  } else if (hand1 == "paper" && hand2 == "scissors") {
+    return "Hand two wins!"
+  } else if (hand1 == "scissors" && hand2 == "paper") {
+    return "Hand one wins!"
+  } else if (hand1 == "rock" && hand2 == "scissors") {
+    return "Hand one wins!"
+  } else if (hand1 == "scissors" && hand2== "rock") {
+    return "Hand two wins!"
+  }
+
+
+  //if hand is scissor then it beats paper
+  //if hand is paper then beats rock
+  //if hand is rock then beats scissor
   // Write code here
   // Use the unit test to see what is expected
 
